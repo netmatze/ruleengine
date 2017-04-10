@@ -14,7 +14,7 @@ namespace SimpleExpressionEvaluator
             ExpressionEvaluatorLexer expressionEvaluatorLexer = new ExpressionEvaluatorLexer(evaluationText, 1);
             ExpressionEvaluatorParser expressionEvaluatorParser = new ExpressionEvaluatorParser(expressionEvaluatorLexer);
             var AbstractSyntaxTreeNodeList = expressionEvaluatorParser.BuildParseTree();
-            ExpressionEvaluatorExecutor expressionEvaluator = new ExpressionEvaluatorExecutor();
+            ExpressionEvaluatorGeneric expressionEvaluator = new ExpressionEvaluatorGeneric();
             var result = expressionEvaluator.Evaluate<T>(AbstractSyntaxTreeNodeList, expressionEvaluatorParser.SymbolTable, objectValue);
             return result;
         }
@@ -24,7 +24,7 @@ namespace SimpleExpressionEvaluator
             ExpressionEvaluatorLexer expressionEvaluatorLexer = new ExpressionEvaluatorLexer(evaluationText, 1);
             ExpressionEvaluatorParser expressionEvaluatorParser = new ExpressionEvaluatorParser(expressionEvaluatorLexer);
             var AbstractSyntaxTreeNodeList = expressionEvaluatorParser.BuildParseTree();
-            ExpressionEvaluatorExecutor expressionEvaluator = new ExpressionEvaluatorExecutor();
+            ExpressionEvaluatorDynamic expressionEvaluator = new ExpressionEvaluatorDynamic();
             var result = expressionEvaluator.EvaluateDynamic(AbstractSyntaxTreeNodeList, expressionEvaluatorParser.SymbolTable, objectValue);
             return result;
         }
@@ -34,7 +34,7 @@ namespace SimpleExpressionEvaluator
             ExpressionEvaluatorLexer expressionEvaluatorLexer = new ExpressionEvaluatorLexer(evaluationText, 1);
             ExpressionEvaluatorParser expressionEvaluatorParser = new ExpressionEvaluatorParser(expressionEvaluatorLexer);
             var AbstractSyntaxTreeNodeList = expressionEvaluatorParser.BuildParseTree();
-            ExpressionEvaluatorExecutor expressionEvaluator = new ExpressionEvaluatorExecutor();
+            ExpressionEvaluatorDynamic expressionEvaluator = new ExpressionEvaluatorDynamic();
             var result = expressionEvaluator.EvaluateDynamic(AbstractSyntaxTreeNodeList, expressionEvaluatorParser.SymbolTable, collection);
             return result;
         }
@@ -44,7 +44,7 @@ namespace SimpleExpressionEvaluator
             ExpressionEvaluatorLexer expressionEvaluatorLexer = new ExpressionEvaluatorLexer(evaluationText, 1);
             ExpressionEvaluatorParser expressionEvaluatorParser = new ExpressionEvaluatorParser(expressionEvaluatorLexer);
             var AbstractSyntaxTreeNodeList = expressionEvaluatorParser.BuildParseTree();
-            ExpressionEvaluatorExecutor expressionEvaluator = new ExpressionEvaluatorExecutor();
+            ExpressionEvaluatorDynamic expressionEvaluator = new ExpressionEvaluatorDynamic();
             var result = expressionEvaluator.EvaluateDynamic(AbstractSyntaxTreeNodeList, expressionEvaluatorParser.SymbolTable, objectValue, collection);
             return result;
         }
@@ -54,7 +54,7 @@ namespace SimpleExpressionEvaluator
             ExpressionEvaluatorLexer expressionEvaluatorLexer = new ExpressionEvaluatorLexer(evaluationText, 1);
             ExpressionEvaluatorParser expressionEvaluatorParser = new ExpressionEvaluatorParser(expressionEvaluatorLexer);
             var AbstractSyntaxTreeNodeList = expressionEvaluatorParser.BuildParseTree();
-            ExpressionEvaluatorExecutor expressionEvaluator = new ExpressionEvaluatorExecutor();
+            ExpressionEvaluatorDynamic expressionEvaluator = new ExpressionEvaluatorDynamic();
             var result = expressionEvaluator.EvaluateDynamic(AbstractSyntaxTreeNodeList, expressionEvaluatorParser.SymbolTable, objectValue);
             return result;
         }
@@ -64,7 +64,7 @@ namespace SimpleExpressionEvaluator
             ExpressionEvaluatorLexer expressionEvaluatorLexer = new ExpressionEvaluatorLexer(evaluationText, 1);
             ExpressionEvaluatorParser expressionEvaluatorParser = new ExpressionEvaluatorParser(expressionEvaluatorLexer);
             var AbstractSyntaxTreeNodeList = expressionEvaluatorParser.BuildParseTree(objectValues);
-            ExpressionEvaluatorExecutor expressionEvaluator = new ExpressionEvaluatorExecutor();
+            ExpressionEvaluatorDynamicBaseClass expressionEvaluator = new ExpressionEvaluatorDynamicBaseClass();
             var result = expressionEvaluator.EvaluateDynamicBaseClass(AbstractSyntaxTreeNodeList, expressionEvaluatorParser.SymbolTable, objectValues);
             return result;
         }
@@ -74,7 +74,7 @@ namespace SimpleExpressionEvaluator
             ExpressionEvaluatorLexer expressionEvaluatorLexer = new ExpressionEvaluatorLexer(evaluationText, 1);
             ExpressionEvaluatorParser expressionEvaluatorParser = new ExpressionEvaluatorParser(expressionEvaluatorLexer);
             var AbstractSyntaxTreeNodeList = expressionEvaluatorParser.BuildParseTree();
-            ExpressionEvaluatorExecutor expressionEvaluator = new ExpressionEvaluatorExecutor();
+            ExpressionEvaluatorGeneric expressionEvaluator = new ExpressionEvaluatorGeneric();
             var result = expressionEvaluator.EvaluateNonBoolean<T,R>(AbstractSyntaxTreeNodeList, expressionEvaluatorParser.SymbolTable, objectValue);
             return result;
         }
@@ -84,7 +84,7 @@ namespace SimpleExpressionEvaluator
             ExpressionEvaluatorLexer expressionEvaluatorLexer = new ExpressionEvaluatorLexer(evaluationText, 1);
             ExpressionEvaluatorParser expressionEvaluatorParser = new ExpressionEvaluatorParser(expressionEvaluatorLexer);
             var AbstractSyntaxTreeNodeList = expressionEvaluatorParser.BuildParseTree();
-            ExpressionEvaluatorExecutor expressionEvaluator = new ExpressionEvaluatorExecutor();
+            ExpressionEvaluatorDynamic expressionEvaluator = new ExpressionEvaluatorDynamic();
             var result = expressionEvaluator.EvaluateNonBooleanDynamic<R>(AbstractSyntaxTreeNodeList, expressionEvaluatorParser.SymbolTable, objectValue);
             return result;
         }
@@ -94,7 +94,7 @@ namespace SimpleExpressionEvaluator
             ExpressionEvaluatorLexer expressionEvaluatorLexer = new ExpressionEvaluatorLexer(evaluationText, 1);
             ExpressionEvaluatorParser expressionEvaluatorParser = new ExpressionEvaluatorParser(expressionEvaluatorLexer);
             var AbstractSyntaxTreeNodeList = expressionEvaluatorParser.BuildParseTree();
-            ExpressionEvaluatorExecutor expressionEvaluator = new ExpressionEvaluatorExecutor();
+            ExpressionEvaluatorDynamic expressionEvaluator = new ExpressionEvaluatorDynamic();
             var result = expressionEvaluator.EvaluateNonBooleanDynamic<R>(AbstractSyntaxTreeNodeList, expressionEvaluatorParser.SymbolTable, collection);
             return result;
         }
@@ -104,7 +104,7 @@ namespace SimpleExpressionEvaluator
             ExpressionEvaluatorLexer expressionEvaluatorLexer = new ExpressionEvaluatorLexer(evaluationText, 1);
             ExpressionEvaluatorParser expressionEvaluatorParser = new ExpressionEvaluatorParser(expressionEvaluatorLexer);
             var AbstractSyntaxTreeNodeList = expressionEvaluatorParser.BuildParseTree();
-            ExpressionEvaluatorExecutor expressionEvaluator = new ExpressionEvaluatorExecutor();
+            ExpressionEvaluatorDynamic expressionEvaluator = new ExpressionEvaluatorDynamic();
             var result = expressionEvaluator.EvaluateNonBooleanDynamic<R>(AbstractSyntaxTreeNodeList, expressionEvaluatorParser.SymbolTable, objectValue);
             return result;
         }
@@ -114,7 +114,7 @@ namespace SimpleExpressionEvaluator
             ExpressionEvaluatorLexer expressionEvaluatorLexer = new ExpressionEvaluatorLexer(evaluationText, 1);
             ExpressionEvaluatorParser expressionEvaluatorParser = new ExpressionEvaluatorParser(expressionEvaluatorLexer);
             var AbstractSyntaxTreeNodeList = expressionEvaluatorParser.BuildParseTree();
-            ExpressionEvaluatorExecutor expressionEvaluator = new ExpressionEvaluatorExecutor();
+            ExpressionEvaluatorDynamic expressionEvaluator = new ExpressionEvaluatorDynamic();
             var result = expressionEvaluator.EvaluateNonBooleanDynamic<R>(AbstractSyntaxTreeNodeList, expressionEvaluatorParser.SymbolTable, collection);
             return result;
         }
@@ -124,7 +124,7 @@ namespace SimpleExpressionEvaluator
             ExpressionEvaluatorLexer expressionEvaluatorLexer = new ExpressionEvaluatorLexer(evaluationText, 1);
             ExpressionEvaluatorParser expressionEvaluatorParser = new ExpressionEvaluatorParser(expressionEvaluatorLexer);
             var AbstractSyntaxTreeNodeList = expressionEvaluatorParser.BuildParseTree();
-            ExpressionEvaluatorExecutor expressionEvaluator = new ExpressionEvaluatorExecutor();
+            ExpressionEvaluatorDynamic expressionEvaluator = new ExpressionEvaluatorDynamic();
             var result = expressionEvaluator.EvaluateNonBooleanDynamic<R>(AbstractSyntaxTreeNodeList, expressionEvaluatorParser.SymbolTable, objectValue, collection);
             return result;
         }
@@ -158,7 +158,7 @@ namespace SimpleExpressionEvaluator
         public bool ExecuteEvaluate<T>(Tuple<List<AbstractSyntaxTree.AbstractSyntaxTreeNode>, 
             Dictionary<string, AbstractSyntaxTree.AbstractSyntaxTreeNode>> values, T objectValue)
         {
-            ExpressionEvaluatorExecutor expressionEvaluator = new ExpressionEvaluatorExecutor();
+            ExpressionEvaluatorGeneric expressionEvaluator = new ExpressionEvaluatorGeneric();
             var result = expressionEvaluator.Evaluate<T>(values.Item1, values.Item2, objectValue);
             return result;
         }
@@ -166,7 +166,7 @@ namespace SimpleExpressionEvaluator
         public bool ExecuteEvaluateDynamic<T>(Tuple<List<AbstractSyntaxTree.AbstractSyntaxTreeNode>,
             Dictionary<string, AbstractSyntaxTree.AbstractSyntaxTreeNode>> values, dynamic objectValue)
         {
-            ExpressionEvaluatorExecutor expressionEvaluator = new ExpressionEvaluatorExecutor();
+            ExpressionEvaluatorDynamic expressionEvaluator = new ExpressionEvaluatorDynamic();
             var result = expressionEvaluator.EvaluateDynamic(values.Item1, values.Item2, objectValue);
             return result;
         }
