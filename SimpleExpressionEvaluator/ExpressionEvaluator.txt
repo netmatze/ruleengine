@@ -1,0 +1,147 @@
+﻿grammar Antlr;
+
+//Expression
+
+options {
+  language = CSharp3;
+}
+
+tokens {         
+       OPENBRACKET = '(';
+       CLOSEBRACKET = ')'; 
+	   OPENSQUAREBRACKET = '[';
+	   CLOSESQUAREBRACKET = ']';
+       POINT = '.';   
+       PLUS = '+';  
+       MINUS = '-';
+       MUL = '*';  
+       DIV = '/';
+       MOD = '%';
+       POINT = '.';
+       EQUAL = '=';
+       UNEQUAL = '!=';
+	   STRING = '"';	   
+       GREATERTHEN = '>';
+       GREATERTHENOREQUAL = '>=';
+       SMALLERTHEN = '<';
+       SMALLERTHENOREQUAL = '<=';
+       AND = '&&';
+       OR = '||';    
+	   TRUE = 'true';
+	   FALSE = 'false';  
+	   SET = 'set';
+	   THEN = 'then';
+	   ELSE = 'else';
+	   IS = 'is';
+	   NULL = 'null';
+	   FIELD = 'field';
+	   COLLECTION = 'collection';
+	   COUNT = 'count';
+	   AVERAGE = 'average';
+	   IN = 'in';
+	   NOTIN = 'notin';
+	   MAX = 'max';
+	   MIN = 'min';
+	   SUM = 'sum';	  
+	   FILTER = 'filter';
+	   LOWER = 'lower';
+	   UPPER = 'upper';
+	   LENGTH = 'length';
+	   TRIM = 'trim';
+	   RIGHTTRIM = 'righttrim';
+	   LEFTTRIM = 'lefttrim';
+      }
+
+rule:    
+  
+    parentExpression 
+          : expression
+          ;
+  
+    expression
+          : relation ((logic) relation)*
+          ;
+          
+    logic 
+          : LOGICALAND | LOGICALOR
+          ;
+  
+    term
+          : variable
+          | classVariable
+          | STRING
+          | bracketExpression
+          | number
+          | BOOLEAN          
+          ;                                
+          
+    bracketExpression
+          : openbracket expression closebracket
+          ;
+          
+    openbracket 
+          : OPENBRACKET
+          ;
+          
+    closebracket 
+          : CLOSEBRACKET
+          ;
+          
+    variable
+          : IDENT
+          ;
+          
+    classVariable 
+          : IDENT POINT IDENT
+          ;
+          
+    unary 
+          : (PLUS | MINUS)* term
+          ;
+          
+    mult 
+          : unary ((MUL | DIV) unary)*  
+          ;
+          
+    add
+          : mult ((PLUS | MINUS) mult)*
+          ;
+          
+    relation 
+          : add ((EQUAL | UNEQUAL | SMALLERTHEN | SMALLERTHENOREQUAL | GREATERTHEN | GREATERTHENOREQUAL) add)*
+          ;    
+          
+    integer 
+          : INTEGER
+          ;           
+      
+    double  
+          : INTEGER POINT INTEGER
+          ;    
+          
+    string 
+          : STRING
+          ;
+
+    number
+          : integer | double       
+          ;    
+            
+    IDENT 
+          : ('a'..'z' | 'A'..'Z')('a'..'z' | 'A'..'Z' | '0..9')*
+          ;
+    
+    STRING 
+            : '"' ('a'..'z' | 'A'..'Z' | '0..9')* '"'
+            ;
+      
+    BOOLEAN 
+            : 'true' | 'false'
+            ;             
+
+    INTEGER 
+            : '0'..'9'+
+            ;            
+        
+    WS : (' ' | '\t' | '\n' | '\r' | '\f')+ {$channel=HIDDEN;};   
+          ;

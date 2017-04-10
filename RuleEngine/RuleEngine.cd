@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RuleEngine.RuleEngine">
+    <Position X="0.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAIACAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RuleEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RuleEngine.ExpressionBuilder">
+    <Position X="4" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkAI=</HashCode>
+      <FileName>ExpressionBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RuleEngine.RuleLoader">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RuleLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RuleEngine.Rule">
+    <Position X="7.25" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAgAADAIAA=</HashCode>
+      <FileName>Rule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="RuleEngine.Operator">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAQRAACA=</HashCode>
+      <FileName>Operator.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

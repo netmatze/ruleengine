@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3083C4FB-E44E-4234-BB4D-5C0713478BDA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimpleExpressionEvaluator</RootNamespace>
+    <AssemblyName>SimpleExpressionEvaluator</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractSyntaxTree\AbstractSyntaxTree.cs" />
+    <Compile Include="AbstractSyntaxTree\AbstractSyntaxTreeNode.cs" />
+    <Compile Include="AbstractSyntaxTree\AddNode.cs" />
+    <Compile Include="AbstractSyntaxTree\AggregateFunctions\AggregateCountNode.cs" />
+    <Compile Include="AbstractSyntaxTree\AggregateFunctions\AggregateAverageNode.cs" />
+    <Compile Include="AbstractSyntaxTree\AggregateFunctions\AggregateInNode.cs" />
+    <Compile Include="AbstractSyntaxTree\AggregateFunctions\AggregateMaxNode.cs" />
+    <Compile Include="AbstractSyntaxTree\AggregateFunctions\AggregateMinNode.cs" />
+    <Compile Include="AbstractSyntaxTree\AggregateFunctions\AggregateNode.cs" />
+    <Compile Include="AbstractSyntaxTree\AggregateFunctions\AggregateNotInNode.cs" />
+    <Compile Include="AbstractSyntaxTree\AggregateFunctions\AggregateSumNode.cs" />
+    <Compile Include="AbstractSyntaxTree\AndNode.cs" />
+    <Compile Include="AbstractSyntaxTree\BinaryNode.cs" />
+    <Compile Include="AbstractSyntaxTree\BooleanNode.cs" />
+    <Compile Include="AbstractSyntaxTree\ClassVarableNode.cs" />
+    <Compile Include="AbstractSyntaxTree\CloseBracketNode.cs" />
+    <Compile Include="AbstractSyntaxTree\CloseSquareBracketNode.cs" />
+    <Compile Include="AbstractSyntaxTree\CollectionNode.cs" />
+    <Compile Include="AbstractSyntaxTree\CommaNode.cs" />
+    <Compile Include="AbstractSyntaxTree\DateTimeNode.cs" />
+    <Compile Include="AbstractSyntaxTree\DivNode.cs" />
+    <Compile Include="AbstractSyntaxTree\DoubleNode.cs" />
+    <Compile Include="AbstractSyntaxTree\ElseNode.cs" />
+    <Compile Include="AbstractSyntaxTree\EqualNode.cs" />
+    <Compile Include="AbstractSyntaxTree\FieldNode.cs" />
+    <Compile Include="AbstractSyntaxTree\FilterNode.cs" />
+    <Compile Include="AbstractSyntaxTree\GreaterThenNode.cs" />
+    <Compile Include="AbstractSyntaxTree\GreaterThenOrEqualNode.cs" />
+    <Compile Include="AbstractSyntaxTree\IntegerNode.cs" />
+    <Compile Include="AbstractSyntaxTree\IsNode.cs" />
+    <Compile Include="AbstractSyntaxTree\LikeNode.cs" />
+    <Compile Include="AbstractSyntaxTree\LogicalNode.cs" />
+    <Compile Include="AbstractSyntaxTree\MethodCallNode.cs" />
+    <Compile Include="AbstractSyntaxTree\ModuloNode.cs" />
+    <Compile Include="AbstractSyntaxTree\MulNode.cs" />
+    <Compile Include="AbstractSyntaxTree\NullNode.cs" />
+    <Compile Include="AbstractSyntaxTree\ObjectNode.cs" />
+    <Compile Include="AbstractSyntaxTree\OpenBracketNode.cs" />
+    <Compile Include="AbstractSyntaxTree\OpenSquareBracketNode.cs" />
+    <Compile Include="AbstractSyntaxTree\OrNode.cs" />
+    <Compile Include="AbstractSyntaxTree\ParseTree.cs" />
+    <Compile Include="AbstractSyntaxTree\PointNode.cs" />
+    <Compile Include="AbstractSyntaxTree\RelationNode.cs" />
+    <Compile Include="AbstractSyntaxTree\SetNode.cs" />
+    <Compile Include="AbstractSyntaxTree\SmallerThenNode.cs" />
+    <Compile Include="AbstractSyntaxTree\SmallerThenOrEqualNode.cs" />
+    <Compile Include="AbstractSyntaxTree\StringFunctions\LeftTrimNode.cs" />
+    <Compile Include="AbstractSyntaxTree\StringFunctions\LengthNode.cs" />
+    <Compile Include="AbstractSyntaxTree\StringFunctions\LowerNode.cs" />
+    <Compile Include="AbstractSyntaxTree\StringFunctions\RightTrimNode.cs" />
+    <Compile Include="AbstractSyntaxTree\StringFunctions\StringFunctionNode.cs" />
+    <Compile Include="AbstractSyntaxTree\StringFunctions\TrimNode.cs" />
+    <Compile Include="AbstractSyntaxTree\StringFunctions\UpperNode.cs" />
+    <Compile Include="AbstractSyntaxTree\StringNode.cs" />
+    <Compile Include="AbstractSyntaxTree\SubNode.cs" />
+    <Compile Include="AbstractSyntaxTree\ThenNode.cs" />
+    <Compile Include="AbstractSyntaxTree\UnEqualNode.cs" />
+    <Compile Include="AbstractSyntaxTree\VariableNode.cs" />
+    <Compile Include="DynamicBaseClass.cs" />
+    <Compile Include="Evaluator.cs" />
+    <Compile Include="Lexer\ExpressionEvaluatorLexer.cs" />
+    <Compile Include="Lexer\Lexer.cs" />
+    <Compile Include="Lexer\Token.cs" />
+    <Compile Include="Lexer\TokenType.cs" />
+    <Compile Include="ObjectType.cs" />
+    <Compile Include="Parser\EvaluatorBase.cs" />
+    <Compile Include="Parser\ExpressionEvaluator.cs" />
+    <Compile Include="Parser\ExpressionEvaluatorDynamic.cs" />
+    <Compile Include="Parser\ExpressionEvaluatorDynamicBaseClass.cs" />
+    <Compile Include="Parser\ExpressionEvaluatorGeneric.cs" />
+    <Compile Include="Parser\ExpressionEvaluatorParser.cs" />
+    <Compile Include="Parser\InfixToPostfix.cs" />
+    <Compile Include="Parser\Parser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Parser\ThenElse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ExpressionEvaluator.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AbstractSyntaxTree\SimpleExpressionEvaluatorAbstractSyntaxTree.cd" />
+    <None Include="Lexer\SimpleExpressionEvaluatorLexer.cd" />
+    <None Include="Parser\SimpleExpressionEvaluatorParser.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LikeParser\LikeParser.csproj">
+      <Project>{d8f4d66f-c308-431b-9b2f-701765389a97}</Project>
+      <Name>LikeParser</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

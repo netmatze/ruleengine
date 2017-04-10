@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.AbstractSyntaxTree">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\AbstractSyntaxTree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.AbstractSyntaxTreeNode">
+    <Position X="7.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\AbstractSyntaxTreeNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.AddNode" Collapsed="true">
+    <Position X="2.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\AddNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.BinaryNode" Collapsed="true">
+    <Position X="3.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\BinaryNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.MulNode" Collapsed="true">
+    <Position X="2.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\MulNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.DivNode" Collapsed="true">
+    <Position X="4.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\DivNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.SubNode" Collapsed="true">
+    <Position X="4.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\SubNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.AndNode" Collapsed="true">
+    <Position X="10.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\AndNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.LogicalNode" Collapsed="true">
+    <Position X="11.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\LogicalNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.OrNode" Collapsed="true">
+    <Position X="12.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\OrNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.EqualNode" Collapsed="true">
+    <Position X="10.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\EqualNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.RelationNode" Collapsed="true">
+    <Position X="11.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\RelationNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.UnEqualNode" Collapsed="true">
+    <Position X="12.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\UnEqualNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.GreaterThenNode" Collapsed="true">
+    <Position X="10.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\GreaterThenNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.GreaterThenOrEqualNode" Collapsed="true">
+    <Position X="12.5" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\GreaterThenOrEqualNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.SmallerThenNode" Collapsed="true">
+    <Position X="10.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\SmallerThenNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.SmallerThenOrEqualNode" Collapsed="true">
+    <Position X="12.5" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\SmallerThenOrEqualNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.StringNode" Collapsed="true">
+    <Position X="2.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\StringNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.VariableNode" Collapsed="true">
+    <Position X="4" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEACAAAAAgAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\VariableNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.OpenBracketNode" Collapsed="true">
+    <Position X="14.5" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\OpenBracketNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.CloseBracketNode" Collapsed="true">
+    <Position X="16.5" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\CloseBracketNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.ClassVarableNode" Collapsed="true">
+    <Position X="18.5" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\ClassVarableNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.BooleanNode" Collapsed="true">
+    <Position X="4" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\BooleanNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.IntegerNode" Collapsed="true">
+    <Position X="5.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\IntegerNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.DoubleNode" Collapsed="true">
+    <Position X="7.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\DoubleNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleExpressionEvaluator.AbstractSyntaxTree.ModuloNode" Collapsed="true">
+    <Position X="2.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractSyntaxTree\ModuloNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

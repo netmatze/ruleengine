@@ -1,0 +1,3 @@
+﻿c - Matches any literal character c
+? - Matches any single character
+% - Matches one or more occurrences of the previous character

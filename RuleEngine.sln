@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30324.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuleEngine", "RuleEngine\RuleEngine.csproj", "{0C5EBFA7-50A5-4695-9623-9C119FEEC429}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuleEngineTests", "RuleEngineTests\RuleEngineTests.csproj", "{AAE01ABA-AADD-4954-8878-A747043F89DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LikeParser", "LikeParser\LikeParser.csproj", "{3D7EEEFD-BBAA-4F11-A24F-4B595B4FD20C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleExpressionEvaluator", "SimpleExpressionEvaluator\SimpleExpressionEvaluator.csproj", "{3083C4FB-E44E-4234-BB4D-5C0713478BDA}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs23
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = RuleEngine\\RuleEngine.csproj
+		SccProjectName1 = RuleEngine
+		SccLocalPath1 = RuleEngine
+		SccProjectUniqueName2 = RuleEngineTests\\RuleEngineTests.csproj
+		SccProjectName2 = RuleEngineTests
+		SccLocalPath2 = RuleEngineTests
+		SccProjectUniqueName3 = LikeParser\\LikeParser.csproj
+		SccProjectName3 = LikeParser
+		SccLocalPath3 = LikeParser
+		SccProjectUniqueName4 = SimpleExpressionEvaluator\\SimpleExpressionEvaluator.csproj
+		SccProjectName4 = SimpleExpressionEvaluator
+		SccLocalPath4 = SimpleExpressionEvaluator
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C5EBFA7-50A5-4695-9623-9C119FEEC429}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C5EBFA7-50A5-4695-9623-9C119FEEC429}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C5EBFA7-50A5-4695-9623-9C119FEEC429}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C5EBFA7-50A5-4695-9623-9C119FEEC429}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAE01ABA-AADD-4954-8878-A747043F89DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAE01ABA-AADD-4954-8878-A747043F89DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAE01ABA-AADD-4954-8878-A747043F89DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAE01ABA-AADD-4954-8878-A747043F89DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D7EEEFD-BBAA-4F11-A24F-4B595B4FD20C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D7EEEFD-BBAA-4F11-A24F-4B595B4FD20C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D7EEEFD-BBAA-4F11-A24F-4B595B4FD20C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D7EEEFD-BBAA-4F11-A24F-4B595B4FD20C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3083C4FB-E44E-4234-BB4D-5C0713478BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3083C4FB-E44E-4234-BB4D-5C0713478BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3083C4FB-E44E-4234-BB4D-5C0713478BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3083C4FB-E44E-4234-BB4D-5C0713478BDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
