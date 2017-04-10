@@ -24,7 +24,7 @@ namespace SimpleExpressionEvaluator.Parser
                 var objectList = new List<object>();
                 for (int parameterCount = 0; parameterCount < ((MethodCallNode)item).parameterList.Count; parameterCount++)
                 {
-                    var parameter = ((MethodCallNode)item).parameterList[parameterCount];
+                    var parameter = ((MethodCallNode)item).parameterList[parameterCount]; 
                     if (parameter is StringNode)
                     {
                         var value = ((StringNode)parameter).Value;
