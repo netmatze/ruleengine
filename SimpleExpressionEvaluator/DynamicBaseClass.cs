@@ -8,6 +8,13 @@ namespace SimpleExpressionEvaluator
 {
     public class DynamicBaseClass : DynamicObject
     {
+        public DynamicBaseClass()
+        {
+            if(string.IsNullOrEmpty(ReferenceName))
+            {
+                this.ReferenceName = this.GetType().Name;
+            }
+        }
         public string Name { get; set; }
 
         public string ReferenceName { get; set; }

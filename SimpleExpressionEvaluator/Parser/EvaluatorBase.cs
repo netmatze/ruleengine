@@ -1,6 +1,7 @@
 ﻿using LikeParser;
 using SimpleExpressionEvaluator.AbstractSyntaxTree;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,123 @@ namespace SimpleExpressionEvaluator.Parser
 
         protected void MethodCallNodeExecuteCall<T>(T objectValue, AbstractSyntaxTreeNode item)
         {
-            var method = objectValue.GetType().GetMethod(((MethodCallNode)item).Name);
+            var array = objectValue.GetType().IsArray;
+            if(array)
+            {
+                IEnumerable arrayItems = objectValue as IEnumerable;
+                foreach (var arrayItem in arrayItems)
+                {
+                    var arrayMethod = arrayItem.GetType().GetMethod(((MethodCallNode)item).Name);
+                    if(arrayMethod != null)
+                    {
+                        var objectList = new List<object>();
+                        for (int parameterCount = 0; parameterCount < ((MethodCallNode)item).parameterList.Count; parameterCount++)
+                        {
+                            var parameter = ((MethodCallNode)item).parameterList[parameterCount];
+                            if (parameter is StringNode)
+                            {
+                                var value = ((StringNode)parameter).Value;
+                                DateTime dateTime = new DateTime();
+                                if (DateTime.TryParse(value, out dateTime))
+                                {
+                                    objectList.Add(dateTime);
+                                }
+                                else
+                                {
+                                    objectList.Add(value);
+                                }
+                            }
+                            else if (parameter is DateTimeNode)
+                            {
+                                var value = ((DateTimeNode)parameter).Value;
+                                objectList.Add(value);
+                            }
+                            else if (parameter is BooleanNode)
+                            {
+                                var value = ((BooleanNode)parameter).Value;
+                                objectList.Add(value);
+                            }
+                            else if (parameter is DoubleNode)
+                            {
+                                var value = ((DoubleNode)parameter).Value;
+                                objectList.Add(value);
+                            }
+                            else if (parameter is IntegerNode)
+                            {
+                                var value = ((IntegerNode)parameter).Value;
+                                objectList.Add(value);
+                            }
+                            else if(parameter is ObjectNode)
+                            {
+                                var value = (ObjectNode)parameter;
+                                var name = value.PropertyName;
+                                var valueItem = value.ObjectValue.GetType().GetProperty(name).GetValue(value.ObjectValue, null);
+                                if(valueItem is int)
+                                {
+                                    objectList.Add((int)valueItem);
+                                }
+                                else if (valueItem is double)
+                                {
+                                    objectList.Add((double)valueItem);
+                                }
+                                else if (valueItem is bool)
+                                {
+                                    objectList.Add((bool)valueItem);
+                                }
+                                else if (valueItem is DateTime)
+                                {
+                                    objectList.Add((DateTime)valueItem);
+                                }
+                                else if (valueItem is String)
+                                {
+                                    objectList.Add((String)valueItem);
+                                }                                                                
+                            }
+                        }
+                        var result = arrayMethod.Invoke(arrayItem, objectList.ToArray());
+                        int intOutValue;
+                        double doubleOutValue;
+                        bool boolOutValue;
+                        DateTime dateTimeOutValue;
+                        if (result == null)
+                        {
+                            NullNode nullNode = new NullNode();
+                            valueStack.Push(nullNode);
+                        }
+                        else if (int.TryParse(result.ToString(), out intOutValue))
+                        {
+                            IntegerNode integerNode = new IntegerNode();
+                            integerNode.Value = intOutValue;
+                            valueStack.Push(integerNode);
+                        }
+                        else if (double.TryParse(result.ToString(), out doubleOutValue))
+                        {
+                            DoubleNode doubleNode = new DoubleNode();
+                            doubleNode.Value = doubleOutValue;
+                            valueStack.Push(doubleNode);
+                        }
+                        else if (bool.TryParse(result.ToString(), out boolOutValue))
+                        {
+                            BooleanNode booleanNode = new BooleanNode();
+                            booleanNode.Value = boolOutValue;
+                            valueStack.Push(booleanNode);
+                        }
+                        else if (DateTime.TryParse(result.ToString(), out dateTimeOutValue))
+                        {
+                            DateTimeNode dateTimeNode = new DateTimeNode();
+                            dateTimeNode.Value = dateTimeOutValue;
+                            valueStack.Push(dateTimeNode);
+                        }
+                        else
+                        {
+                            StringNode stringNode = new StringNode();
+                            stringNode.Value = result.ToString();
+                            valueStack.Push(stringNode);
+                        }
+                    }
+                }
+            }
+            var method = objectValue.GetType().GetMethod(((MethodCallNode)item).Name);            
             if (method != null)
             {
                 var objectList = new List<object>();

@@ -30,6 +30,33 @@ namespace RuleEngineTests
             Assert.AreEqual(result, true);
         }
 
+        public class SomeThing : DynamicBaseClass
+        {
+            public string TestM(string S)
+            {
+                return S.ToLower();
+            }
+        }
+
+        public class PersonDynamic : DynamicBaseClass
+        {    
+        }
+
+        [TestMethod]
+        public void DynamicBaseClassSomeThingTest()
+        {
+            PersonDynamic person = 
+                new PersonDynamic() { ReferenceName = "person", Name = "ALLEN" };
+            SomeThing thing = 
+                new SomeThing() { };
+            Rule rule = new Rule("TestM(person[Name]) = 'allen'");           
+            RuleValidator ruleValidator = new RuleValidator();
+            var result = ruleValidator.ValidateExpressionRulesAll(
+                new DynamicBaseClass[] { person, thing },
+                new Rule[] { rule });
+            Assert.AreEqual(result, true);
+        }
+
         [TestMethod]
         public void DynamicBaseClassComplexTest()
         {
